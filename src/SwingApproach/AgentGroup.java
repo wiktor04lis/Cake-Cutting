@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class AgentGroup {
     protected ArrayList<Agent> agents;
-    protected  double leftBound;
+    protected double leftBound;
     protected double rightBound;
 
     
