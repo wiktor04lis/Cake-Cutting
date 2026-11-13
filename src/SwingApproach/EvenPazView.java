@@ -17,7 +17,7 @@ public class EvenPazView extends JPanel {
     private int rowGap = 50;
     private int messageGap = 90;
     private Map<Integer, Cake> cakes = new HashMap<>();
-    protected int currCakeID = -1;
+    protected int currCakeID = 0;
     private ArrayList<String> messages = new ArrayList<>();
     private MarkListener listener;
 
@@ -73,13 +73,13 @@ public class EvenPazView extends JPanel {
 
         g2.setColor(Color.BLACK);
         FontMetrics fm = g2.getFontMetrics();
-        /*
-        int y = (int) rectangle.getMinY();
+        
+        int y = (int) cakes.get(currCakeID).cake.getMinY() + 15;
         for (String m : messages) {
-            g2.drawString(m, (int) rectangle.getMinX(), y);
+            g2.drawString(m, (int) cakes.get(currCakeID).cake.getMinX(), y);
             y += fm.getHeight();
         }
-        */
+        
     }
 
     public void askAgentForMark(ArrayList<String> message) {
